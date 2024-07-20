@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace SegundoEscritoGF
 {
     public partial class Form1 : Form
@@ -15,6 +14,11 @@ namespace SegundoEscritoGF
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -1,0 +1,5 @@
+C:\Users\Liam\source\repos\SegundoEscritoGF\SegundoEscritoGF\obj\Debug\View.csproj.AssemblyReference.cache
+C:\Users\Liam\source\repos\SegundoEscritoGF\SegundoEscritoGF\obj\Debug\SegundoEscritoGF.Form1.resources
+C:\Users\Liam\source\repos\SegundoEscritoGF\SegundoEscritoGF\obj\Debug\SegundoEscritoGF.Properties.Resources.resources
+C:\Users\Liam\source\repos\SegundoEscritoGF\SegundoEscritoGF\obj\Debug\View.csproj.GenerateResource.cache
+C:\Users\Liam\source\repos\SegundoEscritoGF\SegundoEscritoGF\obj\Debug\View.csproj.CoreCompileInputs.cache

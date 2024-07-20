@@ -1,0 +1,2 @@
+C:\Users\Liam\source\repos\SegundoEscritoGF\Controller\obj\Debug\Controller.csproj.AssemblyReference.cache
+C:\Users\Liam\source\repos\SegundoEscritoGF\Controller\obj\Debug\Controller.csproj.CoreCompileInputs.cache

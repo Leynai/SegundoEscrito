@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    class PersonaModel : MysqlModel
+    public class PersonaModel : MysqlModel
     {
         private string nombre = null;
         private string apellido = null;
@@ -46,7 +46,7 @@ namespace Model
             this.Comando.CommandText = sql;
             this.Comando.ExecuteNonQuery();
         }
-        public void Eliminar(int id)
+        public void Eliminar(uint id)
         {
             string sql = $"DELETE FROM Personas WHERE id = {id}";
             this.Comando.CommandText = sql;
@@ -85,7 +85,7 @@ namespace Model
             return Personas;
         }
 
-        public void ModificarPersona(PersonaModel Persona,uint ID = 0,string Nombre = null,string Apellido = null)
+        public void ModificarPersona(PersonaModel Persona, uint ID = 0, string Nombre = null, string Apellido = null)
         {
             if (ID == 0)
             {
@@ -103,7 +103,7 @@ namespace Model
             string sql = $"UPDATE personas SET nombre = '{Nombre}', apellido = '{Apellido}', id = '{ID}' WHERE id = '{Persona.GetId()}'";
 
         }
-        
+
 
     }
 }

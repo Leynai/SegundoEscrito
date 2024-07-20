@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-namespace Models
+using MySql.Data.MySqlClient;
+namespace Model
 {
     public abstract class MysqlModel
     {
@@ -17,10 +17,10 @@ namespace Models
         public MySqlCommand Comando;
         public MySqlDataReader Lector;
 
-        public Modelo()
+        public MysqlModel()
         {
             this.IP = "127.0.0.1";
-            this.NombreBase = "pizzas";
+            this.NombreBase = "Personas";
             this.Password = "";
             this.NombreDeUsuario = "root";
 
@@ -36,4 +36,5 @@ namespace Models
             this.Comando = new MySqlCommand();
             this.Comando.Connection = this.Conexion;
         }
+    }
 }

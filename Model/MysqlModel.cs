@@ -20,7 +20,7 @@ namespace Model
         public MysqlModel()
         {
             this.IP = "127.0.0.1";
-            this.NombreBase = "Personas";
+            this.NombreBase = "personas";
             this.Password = "";
             this.NombreDeUsuario = "root";
 

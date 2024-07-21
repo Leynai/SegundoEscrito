@@ -52,10 +52,11 @@ namespace SegundoEscritoGF
             this.label6 = new System.Windows.Forms.Label();
             this.EliminarButton = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.IdBuscarBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.BuscarButton = new System.Windows.Forms.Button();
-            this.IdBuscarBox = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.MostrarDatosButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tablaDeDatos)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -216,6 +217,7 @@ namespace SegundoEscritoGF
             this.ModificarButton.TabIndex = 6;
             this.ModificarButton.Text = "Modificar";
             this.ModificarButton.UseVisualStyleBackColor = true;
+            this.ModificarButton.Click += new System.EventHandler(this.ModificarButton_Click);
             // 
             // ApellidoModificarText
             // 
@@ -245,7 +247,7 @@ namespace SegundoEscritoGF
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.EliminarButton);
-            this.panel3.Location = new System.Drawing.Point(509, 334);
+            this.panel3.Location = new System.Drawing.Point(518, 391);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(209, 118);
             this.panel3.TabIndex = 11;
@@ -278,10 +280,26 @@ namespace SegundoEscritoGF
             this.panel4.Controls.Add(this.IdBuscarBox);
             this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.BuscarButton);
-            this.panel4.Location = new System.Drawing.Point(277, 334);
+            this.panel4.Location = new System.Drawing.Point(277, 391);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(209, 118);
             this.panel4.TabIndex = 12;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(27, 48);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(18, 13);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "ID";
+            // 
+            // IdBuscarBox
+            // 
+            this.IdBuscarBox.Location = new System.Drawing.Point(51, 45);
+            this.IdBuscarBox.Name = "IdBuscarBox";
+            this.IdBuscarBox.Size = new System.Drawing.Size(100, 20);
+            this.IdBuscarBox.TabIndex = 8;
             // 
             // label7
             // 
@@ -304,27 +322,22 @@ namespace SegundoEscritoGF
             this.BuscarButton.UseVisualStyleBackColor = true;
             this.BuscarButton.Click += new System.EventHandler(this.BuscarButton_Click);
             // 
-            // IdBuscarBox
+            // MostrarDatosButton
             // 
-            this.IdBuscarBox.Location = new System.Drawing.Point(51, 45);
-            this.IdBuscarBox.Name = "IdBuscarBox";
-            this.IdBuscarBox.Size = new System.Drawing.Size(100, 20);
-            this.IdBuscarBox.TabIndex = 8;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(27, 48);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(18, 13);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "ID";
+            this.MostrarDatosButton.Location = new System.Drawing.Point(394, 334);
+            this.MostrarDatosButton.Name = "MostrarDatosButton";
+            this.MostrarDatosButton.Size = new System.Drawing.Size(200, 36);
+            this.MostrarDatosButton.TabIndex = 14;
+            this.MostrarDatosButton.Text = "Mostrar Todas las personas";
+            this.MostrarDatosButton.UseVisualStyleBackColor = true;
+            this.MostrarDatosButton.Click += new System.EventHandler(this.MostrarDatosButton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(783, 521);
+            this.Controls.Add(this.MostrarDatosButton);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -374,6 +387,7 @@ namespace SegundoEscritoGF
         private System.Windows.Forms.TextBox IdBuscarBox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button BuscarButton;
+        private System.Windows.Forms.Button MostrarDatosButton;
     }
 }
 

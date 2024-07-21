@@ -31,17 +31,43 @@ namespace Controller
 
             Persona.ModificarPersona(Persona.BuscarPersona(Persona.GetId()), Id, Nombre, Apellido);
         }
-        public static void BuscarPersona(uint id)
+        public static DataTable BuscarPersona(uint id)
         {
             PersonaModel Persona = new PersonaModel();
-            Persona.BuscarPersona(id);
+            DataTable tabla = new DataTable();
+
+            Persona = Persona.BuscarPersona(id);
+            DataRow Fila = tabla.NewRow();
+            Fila["ID"] = Persona.GetId();
+            Fila["Nombre"] = Persona.GetNombre();
+            Fila["Apellido"] = Persona.GetApellido();
+            tabla.Rows.Add(Fila);
+
+            return tabla;
         }
         public static DataTable ListarPersonas()
         {
+            DataTable tabla = new DataTable();
+            tabla.Columns.Add("Id", typeof(uint));
+            tabla.Columns.Add("Nombre", typeof(string));
+            tabla.Columns.Add("Apellido", typeof(string));
+
+
+
+
             PersonaModel Persona = new PersonaModel();
             List<PersonaModel> Personas = new List<PersonaModel>();
-            Personas = Persona.ListarPersonas();
-            return Personas;
+
+            foreach (PersonaModel p in Persona.ListarPersonas())
+            {
+                DataRow fila = tabla.NewRow();
+                fila["Id"] = p.GetId();
+                fila["Nombre"] = p.GetNombre();
+                fila["Apellido"] = p.GetApellido();
+                tabla.Rows.Add(fila);
+            }
+
+            return tabla;
         }
     }
 }

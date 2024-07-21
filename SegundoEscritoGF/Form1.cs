@@ -16,6 +16,9 @@ namespace SegundoEscritoGF
         public Form1()
         {
             InitializeComponent();
+            tablaDeDatos.Rows.Add("ID", typeof(uint));
+            tablaDeDatos.Rows.Add("Nombre", typeof(string));
+            tablaDeDatos.Rows.Add("Apellido", typeof(string));
         }
 
         private void GuardarPersonaButton_Click(object sender, EventArgs e)
@@ -34,14 +37,45 @@ namespace SegundoEscritoGF
 
         private void EliminarButton_Click(object sender, EventArgs e)
         {
-            string id = tablaDeDatos.SelectedRows[0].Cells["id"].Value.ToString();
+            string id = tablaDeDatos.SelectedRows[0].Cells["ID"].Value.ToString();
             PersonaController.EliminarPersona(UInt32.Parse(id));
             refrescarTablaDeDatos();
         }
 
         private void BuscarButton_Click(object sender, EventArgs e)
         {
-            PersonaController.BuscarPersona(UInt32.Parse(IdBuscarBox.Text));
+            tablaDeDatos.Rows.Clear();
+            tablaDeDatos.Refresh();
+            tablaDeDatos.DataSource = PersonaController.BuscarPersona(UInt32.Parse(IdBuscarBox.Text));
+           
+        }
+
+        private void ModificarButton_Click(object sender, EventArgs e)
+        {
+            uint id = 0;
+            string nom = null;
+            string ape = null;
+
+            if (!string.IsNullOrWhiteSpace(IdModificarText.Text))
+            {
+                id = UInt32.Parse(IdModificarText.Text);
+            }
+            if (!string.IsNullOrWhiteSpace(NombreModificarText.Text))
+            {
+                nom = NombreModificarText.Text;
+            }
+            if (!string.IsNullOrWhiteSpace(ApellidoModificarText.Text))
+            {
+                ape = ApellidoModificarText.Text;
+            }
+
+            PersonaController.ModificarPersona(id, nom, ape);
+            refrescarTablaDeDatos();
+        }
+
+        private void MostrarDatosButton_Click(object sender, EventArgs e)
+        {
+            refrescarTablaDeDatos();
         }
     }
 }

@@ -8,3 +8,4 @@ C:\Users\Liam\source\repos\SegundoEscritoGF\SegundoEscritoGF\obj\Debug\View.cspr
 C:\Users\Liam\source\repos\SegundoEscritoGF\SegundoEscritoGF\obj\Debug\View.csproj.CoreCompileInputs.cache
 C:\Users\Liam\source\repos\SegundoEscritoGF\SegundoEscritoGF\obj\Debug\SegundoEscritoGF.exe
 C:\Users\Liam\source\repos\SegundoEscritoGF\SegundoEscritoGF\obj\Debug\SegundoEscritoGF.pdb
+C:\Users\Liam\source\repos\SegundoEscritoGF\SegundoEscritoGF\obj\Debug\SegundoEscritoGF.exe.config

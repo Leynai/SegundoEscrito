@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,7 +12,7 @@ namespace Controller
     public class PersonaController
     {
         
-        public void CrearPersona(uint id,string name,string lastname)
+        public static void CrearPersona(uint id,string name,string lastname)
         {
             PersonaModel Persona = new PersonaModel();
             Persona.SetID(id);
@@ -19,28 +20,28 @@ namespace Controller
             Persona.SetApellido(lastname);
             Persona.Guardar(Persona);
         }
-        public void EliminarPersona(uint id)
+        public static void EliminarPersona(uint id)
         {
             PersonaModel Persona = new PersonaModel();
             Persona.Eliminar(id);
         }
-        public void ModificarPersona(uint Id = 0,string Nombre = null ,string Apellido = null)
+        public static void ModificarPersona(uint Id = 0,string Nombre = null ,string Apellido = null)
         {
             PersonaModel Persona = new PersonaModel();
 
             Persona.ModificarPersona(Persona.BuscarPersona(Persona.GetId()), Id, Nombre, Apellido);
         }
-        public void BuscarPersona(uint id)
+        public static void BuscarPersona(uint id)
         {
             PersonaModel Persona = new PersonaModel();
             Persona.BuscarPersona(id);
         }
-        public void ListarPersonas()
+        public static DataTable ListarPersonas()
         {
             PersonaModel Persona = new PersonaModel();
             List<PersonaModel> Personas = new List<PersonaModel>();
             Personas = Persona.ListarPersonas();
-
+            return Personas;
         }
     }
 }
